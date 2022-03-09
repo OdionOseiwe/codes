@@ -1,0 +1,14 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "js practice",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss main.css -w"
+  },
+  "author": "oseiwe",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

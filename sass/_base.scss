@@ -1,0 +1,208 @@
+.header{
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    border-bottom: 1px solid #ccc;
+    
+    &__video{
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: -1;
+       opacity: .50;
+       width: 100%;
+    }
+
+    &__content{
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        
+        
+    }
+
+    &__4{
+        color:rgb(0, 132, 255);
+        font-size: 2rem;
+        text-align: center;
+        
+    }
+
+    &__1{
+        color:rgb(0, 132, 255);
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+}
+
+
+.head{
+    background-color: rgba(#fff, .3);
+    padding: 0 3rem;
+    width: 25%;
+    margin: 0 auto;
+    height: 100%;
+   
+}
+
+.btn{
+    border: none;
+    background-color: rgba($color: #fff, $alpha: .3);
+    font-size: inherit;
+    color: inherit;
+    padding: .4rem;
+    border: .5px slid #777;
+}
+
+
+
+.incomes{
+    padding: 1rem;
+    background-color: greenyellow;
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    
+
+    &__right{
+        float: right;
+        color: #fff;
+    }
+
+    &__left{
+        float: right;
+        color: #fff;
+    }
+}
+
+.expenses{
+    padding: 1rem;
+    background-color: red;
+    display: block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.nav-base{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 1px solid #ccc;
+    background-color:rgba($color: #ddd, $alpha: .3) ;
+    font-size: 2rem;
+    
+    
+    & > *{
+        margin-right: 3rem;
+    }
+
+    &__select{
+        background-color: white !important;
+        font-size: 2rem;
+        background: url('https://cdn3.iconfinder.com/data/icons/trico-arrows-1/24/ExpandUpDownSmall-512.png') no-repeat right #ddd;
+        background-position: 98%;
+        padding:  1rem;
+        padding-right: 2.5rem;
+        background-size: 14px;
+       -moz-appearance: none;
+       -o-appearance: none;
+       -ms-appearance: none;
+       -webkit-appearance: none;
+       outline: none !important;
+       border-radius: 5px;
+       -webkit-border-radius: 2px;
+       box-shadow: 0 0 .5rem rgba($color: #000, $alpha: .4);
+       border: none;
+
+       &:focus{
+        border: .5px solid greenyellow;
+        box-shadow: none;
+       }
+    }
+
+    &__des,
+    &__value{
+        font-size: 2rem;
+        background-color: #fff;
+        font-family: 'inter';
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        display: inline-block;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 .5rem rgba($color: #000, $alpha: .4);
+       
+        &:focus{
+            border: .5px solid greenyellow;
+            box-shadow: none;
+           }
+    }
+
+    &__des{
+        width: 40rem;
+    }
+
+    &__value{
+        width: 10rem;
+    }
+}
+
+.expense{
+      
+    &:focus{
+        border: .5px solid greenyellow;
+        box-shadow: none;
+    }
+
+}
+
+svg{
+    width: 3rem;
+    height: 3rem;
+    fill:greenyellow;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+svg:active{
+    transform: translateY(-2px);
+}
+
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    font-size: 1.5rem;
+
+   
+    &__income{
+        padding: 2rem;
+        &--heading{
+            font-size: 2.5rem;
+            color: greenyellow;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    &__expenses{
+        padding: 2rem ;
+
+        &--heading{
+            font-size: 2.5rem;
+            color: red;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+}
+

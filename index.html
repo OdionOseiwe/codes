@@ -1,0 +1,84 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="main.css">
+      <title>OBECTS PRACTICE </title>
+  </head>
+  <body>
+        <div class="container">
+            <div class="header">
+                <div class="header__video">
+                    <video class="header__content" autoplay loop muted>   
+                        <source src="img/stock-footage-business-network-concept-group-of-businessperson-teamwork-human-resources.webm" type="video/mp4">
+                    </video>
+                </div>
+                <div class="head">
+                    <h4 class="header__4">Available Budget in %Month%:</h4>
+                    <h1 class="header__1">+2,345.64</h1>
+
+                    <div class="incomes">
+                        <h4 class="incomes__h4">income <span class="incomes__right">+4,300.00</span></h4> 
+                    </div>
+
+                    <div class="expenses">
+                        <h4 class="expenses__h4">income <span class="incomes__left">+1,954.36  <button class="btn"> 45%</button></span> </h4> 
+                    </div>
+                </div>
+                
+            </div>
+            <div class="nav-base">
+                <select name="number" id="signs" class="nav-base__select">
+                    <option value="inc" selected>+</option>
+                    <option value="exp">-</option>
+                </select>
+                   
+                <input type="text" id="nav-base__id" class="nav-base__des" placeholder="Add Description">
+                   
+                <input type="number" id="nav-base__id" class="nav-base__value" placeholder="value">
+               
+                <svg id="nav-base__check">
+                    <use xlink:href="img/symbol-defs.svg#icon-check"></use>
+                </svg>
+            </div>
+        
+            <div class="body">
+                <div class="body__income">
+                    <div class="body__income body__income--heading">income</div>
+                    <div class="body__income body__income--part">
+                        <div class="item">
+                            <div class="item clearfix" id="income-0">
+                                <div class="item__description">Salary</div>
+                                 <div class="item__date"></div>
+                                <div class="right clearfix">                           
+                                    <div class="item__value">+ 2,100.00</div>
+                                    <div class="item__delete">
+                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="item clearfix" id="income-1">
+                                <div class="item__description">Sold car</div>
+                                <div class="item__date"></div>
+                                <div class="right clearfix">                               
+                                    <div class="item__value">+ 1,500.00</div>
+                                    <div class="item__delete">
+                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body__expenses">
+                    <div class="body__expenses body__expenses--heading">expenses</div>
+                    <div class="body__expenses body__expenses--part"></div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+  </body>
+  </html>

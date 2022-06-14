@@ -35,34 +35,42 @@
   margin: 0 auto;
   height: 100%; }
 
-.btn {
-  border: none;
-  background-color: rgba(255, 255, 255, 0.3);
-  font-size: inherit;
-  color: inherit;
-  padding: .4rem;
-  border: .5px slid #777; }
-
 .incomes {
   padding: 1rem;
-  background-color: greenyellow;
+  background-color: blueviolet;
   display: block;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 100;
+  color: #222; }
   .incomes__right {
     float: right;
-    color: #fff; }
-  .incomes__left {
-    float: right;
-    color: #fff; }
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 100;
+    margin-right: 5rem; }
 
 .expenses {
   padding: 1rem;
   background-color: red;
-  display: block;
-  font-size: 1.5rem;
-  text-transform: uppercase; }
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  text-transform: uppercase;
+  color: #222; }
+  .expenses__left {
+    margin-left: auto;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 100; }
+  .expenses__per {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 1.6rem;
+    color: #fff;
+    padding: .2rem;
+    margin-left: 1rem; }
 
 .nav-base {
   display: flex;
@@ -92,12 +100,12 @@
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
     border: none; }
     .nav-base__select:focus {
-      border: .5px solid greenyellow;
+      border: .5px solid blueviolet;
       box-shadow: none; }
   .nav-base__des, .nav-base__value {
-    font-size: 2rem;
+    font-size: 2.1rem;
     background-color: #fff;
-    font-family: 'inter';
+    font-family: Arial, Helvetica;
     padding: 1rem 1.5rem;
     border-radius: 5px;
     display: inline-block;
@@ -105,7 +113,7 @@
     outline: none;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4); }
     .nav-base__des:focus, .nav-base__value:focus {
-      border: .5px solid greenyellow;
+      border: .5px solid blueviolet;
       box-shadow: none; }
   .nav-base__des {
     width: 40rem; }
@@ -113,13 +121,13 @@
     width: 10rem; }
 
 .expense:focus {
-  border: .5px solid greenyellow;
+  border: .5px solid blueviolet;
   box-shadow: none; }
 
 svg {
   width: 3rem;
   height: 3rem;
-  fill: greenyellow;
+  fill: blueviolet;
   transition: transform .2s;
   cursor: pointer; }
 
@@ -129,22 +137,119 @@ svg:active {
 .body {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-  font-size: 1.5rem; }
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif; }
   .body__income {
-    padding: 2rem; }
+    padding: 2rem;
+    margin-left: 15%; }
     .body__income--heading {
-      font-size: 2.5rem;
-      color: greenyellow;
-      text-transform: uppercase;
-      text-align: center; }
+      font-size: 3rem;
+      color: blueviolet;
+      text-transform: uppercase; }
   .body__expenses {
-    padding: 2rem; }
+    padding: 2rem;
+    margin-right: 15%; }
     .body__expenses--heading {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: red;
-      text-transform: uppercase;
-      text-align: center; }
+      text-transform: uppercase; }
+
+.income {
+  font-size: 2rem;
+  display: flex;
+  border-top: 1px solid #ddd; }
+  .income__description {
+    color: #777;
+    font-size: 2.5rem; }
+  .income__value {
+    color: blueviolet;
+    margin-left: auto;
+    font-size: 2.5rem;
+    transition: all .3s; }
+  .income__del {
+    height: 2rem;
+    width: 2rem;
+    fill: blueviolet; }
+  .income__delete {
+    margin-left: 1rem;
+    display: none;
+    transition: all .3s; }
+    .income__delete:active {
+      transform: translateY(2px); }
+    .income__delete--btn {
+      border: none;
+      background-color: transparent;
+      padding: .5rem; }
+  .income:hover .income__delete,
+  .income:active .income__delete {
+    display: block;
+    margin-top: 2px; }
+  .income:hover .income__percentage,
+  .income:active .income__percentage {
+    transform: translateX(-2rem); }
+  .income:hover .income__value,
+  .income:active .income__value {
+    transform: translateX(-2rem); }
+
+.expense {
+  font-size: 2rem;
+  display: flex;
+  border-top: 1px solid #ddd; }
+  .expense__description {
+    color: #777;
+    font-size: 2.5rem; }
+  .expense__value {
+    color: red;
+    margin-left: auto;
+    font-size: 2.5rem;
+    transition: all .3s; }
+  .expense__del {
+    height: 2rem;
+    width: 2rem;
+    fill: red; }
+  .expense__delete {
+    display: none;
+    transition: all .3s;
+    backface-visibility: hidden; }
+    .expense__delete:active {
+      transform: translateY(2px); }
+    .expense__delete--btn {
+      border: none;
+      background-color: transparent;
+      padding: .5rem; }
+  .expense:hover .expense__delete,
+  .expense:active .expense__delete {
+    display: block;
+    margin-top: .5rem; }
+  .expense:hover .expense__percentage,
+  .expense:active .expense__percentage {
+    transform: translateX(-2rem); }
+  .expense:hover .expense__value,
+  .expense:active .expense__value {
+    transform: translateX(-2rem); }
+
+.but {
+  background-color: red;
+  font-size: 2.1rem;
+  color: #fff; }
+
+.percentage {
+  background-color: red;
+  font-size: 1.6rem;
+  color: #fff;
+  display: flex;
+  align-self: center;
+  margin-left: 1.2rem;
+  transition: all .3s; }
+
+.income-part:nth-child(23n+1) {
+  background-color: yellow; }
+
+.red {
+  fill: red; }
+
+.redfocus:focus {
+  border: .5px solid red; }
 
 * {
   margin: 0;

@@ -16,7 +16,7 @@
                     </video>
                 </div>
                 <div class="head">
-                    <h4 class="header__4">Available Budget in %Month%:</h4>
+                    <h4 class="header__4">Available Budget in <span class="Mouth"> %Month%:</span>:</h4>
                     <h1 class="header__1">+2,345.64</h1>
 
                     <div class="incomes">
@@ -24,14 +24,16 @@
                     </div>
 
                     <div class="expenses">
-                        <h4 class="expenses__h4">income <span class="incomes__left">+1,954.36  <button class="btn"> 45%</button></span> </h4> 
+                        <h4 class="expenses__h4"> expense</h4>  
+                        <div class="expenses__left">+1,954.36 </div>   
+                        <div class="expenses__per">45%</div> 
                     </div>
                 </div>
                 
             </div>
             <div class="nav-base">
                 <select name="number" id="signs" class="nav-base__select">
-                    <option value="inc" selected>+</option>
+                    <option value="inc" selected >+</option>
                     <option value="exp">-</option>
                 </select>
                    
@@ -39,7 +41,7 @@
                    
                 <input type="number" id="nav-base__id" class="nav-base__value" placeholder="value">
                
-                <svg id="nav-base__check">
+                <svg class="nav-base__check">
                     <use xlink:href="img/symbol-defs.svg#icon-check"></use>
                 </svg>
             </div>
@@ -47,35 +49,50 @@
             <div class="body">
                 <div class="body__income">
                     <div class="body__income body__income--heading">income</div>
-                    <div class="body__income body__income--part">
-                        <div class="item">
-                            <div class="item clearfix" id="income-0">
-                                <div class="item__description">Salary</div>
-                                 <div class="item__date"></div>
-                                <div class="right clearfix">                           
-                                    <div class="item__value">+ 2,100.00</div>
-                                    <div class="item__delete">
-                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                    <div class="income-part">
+                            <!-- <div class="income" id="income-0">
+                                <div class="income__description">Salary</div>                          
+                                    <div class="income__value">+ 2,100.00</div>
+                                    <div class="income__delete">
+                                        <button class="income__delete income__delete--btn">
+                                            <svg class="income__del">
+                                                <use xlink:href="sass/symbol-defs.svg#icon-close"></use>
+                                            </svg> 
+                                        </button>
                                     </div>
-                                </div>
                             </div>
                             
-                            <div class="item clearfix" id="income-1">
-                                <div class="item__description">Sold car</div>
-                                <div class="item__date"></div>
-                                <div class="right clearfix">                               
-                                    <div class="item__value">+ 1,500.00</div>
-                                    <div class="item__delete">
-                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                            <div class="income" id="income-1">
+                                <div class="income__description">Sold car</div>                               
+                                    <div class="income__value">+ 1,500.00</div>
+                                    <div class="income__delete">
+                                        <button class="income__delete income__delete--btn">
+                                            <svg class="income__del">
+                                                <use xlink:href="sass/symbol-defs.svg#icon-close"></use>
+                                            </svg>
+                                        </button>
                                     </div>
-                                </div>
-                            </div>
+                            </div> -->
                         </div>
-                    </div>
                 </div>
                 <div class="body__expenses">
                     <div class="body__expenses body__expenses--heading">expenses</div>
-                    <div class="body__expenses body__expenses--part"></div>
+                    <div class="expense-part">
+                  
+                        <!-- <div class="expense" id="expense-0">
+                            <div class="expense__description">Sold car</div>                               
+                                <div class="expense__value">+ 1,500.00</div>
+                                <div class="percentage">20%</div>                                
+                                <div class="expense__delete">
+                                    <button class="expense__delete--btn">
+                                        <svg class="expense__del">
+                                            <use xlink:href="sass/symbol-defs.svg#icon-close"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                        </div>
+                     -->
+                    </div>
                 </div>
             </div>
         </div>

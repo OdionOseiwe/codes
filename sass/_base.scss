@@ -19,9 +19,7 @@
     &__content{
         width: 100%;
         height: 30vh;
-        object-fit: cover;
-        
-        
+        object-fit: cover;  
     }
 
     &__4{
@@ -50,43 +48,50 @@
    
 }
 
-.btn{
-    border: none;
-    background-color: rgba($color: #fff, $alpha: .3);
-    font-size: inherit;
-    color: inherit;
-    padding: .4rem;
-    border: .5px slid #777;
-}
-
-
-
 .incomes{
     padding: 1rem;
-    background-color: greenyellow;
+    background-color: blueviolet;
     display: block;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
-    
-
+    font-weight: 100;
+    color: #222;
+   
     &__right{
         float: right;
         color: #fff;
-    }
-
-    &__left{
-        float: right;
-        color: #fff;
+        font-size: 1.7rem;
+        font-weight: 100;
+        margin-right: 5rem;
     }
 }
 
 .expenses{
     padding: 1rem;
     background-color: red;
-    display: block;
-    font-size: 1.5rem;
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
     text-transform: uppercase;
+    color: #222;
+
+    &__left{
+        margin-left: auto;
+        color: #fff;
+        font-size: 1.7rem;
+        font-weight: 100;
+       
+    }
+
+    &__per{
+        border: none;
+        background-color: rgba($color: #fff, $alpha: .3);
+        font-size: 1.6rem;
+        color: #fff;
+        padding: .2rem;
+        margin-left: 1rem
+    }
 }
 
 .nav-base{
@@ -123,16 +128,16 @@
        border: none;
 
        &:focus{
-        border: .5px solid greenyellow;
+        border: .5px solid blueviolet;
         box-shadow: none;
        }
     }
 
     &__des,
     &__value{
-        font-size: 2rem;
+        font-size: 2.1rem;
         background-color: #fff;
-        font-family: 'inter';
+        font-family:Arial, Helvetica;
         padding: 1rem 1.5rem;
         border-radius: 5px;
         display: inline-block;
@@ -141,7 +146,7 @@
         box-shadow: 0 0 .5rem rgba($color: #000, $alpha: .4);
        
         &:focus{
-            border: .5px solid greenyellow;
+            border: .5px solid blueviolet;
             box-shadow: none;
            }
     }
@@ -158,7 +163,7 @@
 .expense{
       
     &:focus{
-        border: .5px solid greenyellow;
+        border: .5px solid blueviolet;
         box-shadow: none;
     }
 
@@ -167,7 +172,7 @@
 svg{
     width: 3rem;
     height: 3rem;
-    fill:greenyellow;
+    fill:blueviolet;
     transition: transform .2s;
     cursor: pointer;
 }
@@ -180,29 +185,164 @@ svg:active{
 .body{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-    font-size: 1.5rem;
-
+   //grid-gap: 2rem;
+    font-size: 2rem;
+    font-family:Arial, Helvetica, sans-serif;
    
     &__income{
         padding: 2rem;
+        margin-left: 15%;
         &--heading{
-            font-size: 2.5rem;
-            color: greenyellow;
+            font-size: 3rem;
+            color: blueviolet;
             text-transform: uppercase;
-            text-align: center;
-        }
-    }
+        }}
+    
 
     &__expenses{
         padding: 2rem ;
-
+        margin-right: 15%;
         &--heading{
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: red;
             text-transform: uppercase;
-            text-align: center;
+            
         }
     }
 }
 
+.income{
+    font-size: 2rem;
+    display: flex;
+    border-top: 1px solid #ddd;
+   
+    &__description{
+        color: #777;
+        font-size: 2.5rem;  
+    }
+
+    &__value{
+        color:blueviolet;
+        margin-left: auto;
+        font-size: 2.5rem;
+        transition: all .3s;
+    }
+
+    &__del{
+        height: 2rem;
+        width: 2rem;
+        fill: blueviolet;
+    }
+
+    &__delete{
+        margin-left: 1rem;
+        display: none;
+        transition: all .3s;
+
+        &:active{
+            transform: translateY(2px);
+        }
+       
+        &--btn{
+            border: none;
+            background-color: transparent;
+            padding: .5rem;   
+        }
+    }
+
+    &:hover &__delete,
+    &:active &__delete{
+        display: block;
+        margin-top: 2px;
+    }  
+    
+    &:hover &__percentage,
+    &:active &__percentage{
+        transform: translateX(-2rem);
+    }
+
+    &:hover &__value,
+    &:active &__value{
+        transform: translateX(-2rem);
+    }
+}
+
+.expense{
+    font-size: 2rem;
+    display: flex;
+    border-top: 1px solid #ddd;
+    &__description{
+        color: #777;
+        font-size: 2.5rem;
+        
+    }
+
+    &__value{
+        color:red;
+        margin-left: auto;
+        font-size: 2.5rem;
+        transition: all .3s;
+    }
+
+    &__del{
+        height: 2rem;
+        width: 2rem;
+        fill: red;
+    }
+
+    &__delete{
+        display: none;
+        transition: all .3s;
+        backface-visibility: hidden;
+
+        &:active{
+            transform: translateY(2px); 
+        }
+       
+        &--btn{
+            border: none;
+            background-color: transparent;
+            padding: .5rem;
+        }
+    }
+
+
+    &:hover &__delete,
+    &:active &__delete{
+        display: block;
+        margin-top: .5rem;
+    }  
+    
+    &:hover &__percentage,
+    &:active &__percentage{
+        transform: translateX(-2rem);
+    }
+
+    &:hover &__value,
+    &:active &__value{
+        transform: translateX(-2rem);
+    }
+}
+
+.but{
+    background-color: red;
+    font-size: 2.1rem;
+    color: #fff;
+}
+
+.percentage{
+    background-color: red;
+    font-size: 1.6rem;
+    color: #fff;
+    display: flex;
+    align-self: center;
+    margin-left: 1.2rem;  
+    transition: all .3s;   
+}
+
+.income-part:nth-child(23n+1){
+    background-color: yellow;
+}
+    
+.red{fill: red;}
+.redfocus:focus{border: .5px solid red;}
